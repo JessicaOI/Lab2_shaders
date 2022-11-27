@@ -204,7 +204,7 @@ class Render(object):
         for x in range(bbox_min.x, bbox_max.x + 1):
             for y in range(bbox_min.y, bbox_max.y + 1):
                 w, v, u = barycentric(A, B, C, V2(x, y))
-                if w < 0 or v < 0 or u < 0:  # 0 is actually a valid value! (it is on the edge)
+                if w < 0 or v < 0 or u < 0:
                     continue
                 color = self.shader(x, y, self.wvp, self.hvp)
                 z = A.z * w + B.z * v + C.z * u
