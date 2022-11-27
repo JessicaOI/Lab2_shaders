@@ -1,3 +1,5 @@
+#Lab2 graficas
+#Jessica Ortiz 20192
 from gl import Render
 
 r = Render()
